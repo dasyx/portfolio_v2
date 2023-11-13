@@ -1,21 +1,81 @@
 <div class="parent">
-  <div class="div1">Contenu de div1</div>
-  <div class="div2">Contenu de div2</div>
-  <div class="div3">Contenu de div3</div>
-  <div class="div4">Contenu de div4</div>
-  <div class="div5">Contenu de div5</div>
+  <div class="div1">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Leo urna molestie at
+    elementum. Praesent elementum facilisis leo vel fringilla est ullamcorper.
+    Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Bibendum arcu
+    vitae elementum curabitur vitae nunc sed. Tincidunt eget nullam non nisi
+    est. Porttitor eget dolor morbi non arcu. Pellentesque elit eget gravida cum
+    sociis natoque penatibus et. A cras semper auctor neque vitae tempus. Nisl
+    tincidunt eget nullam non nisi. Cum sociis natoque penatibus et magnis dis.
+    Viverra aliquet eget sit amet tellus cras adipiscing enim. Dictumst quisque
+    sagittis purus sit amet volutpat consequat mauris. Felis imperdiet proin
+    fermentum leo vel orci. Posuere morbi leo urna molestie at. Magna fermentum
+    iaculis eu non. Vitae ultricies leo integer malesuada nunc vel. Rhoncus est
+    pellentesque elit ullamcorper dignissim cras tincidunt lobortis. A cras
+    semper auctor neque vitae tempus quam pellentesque nec.
+  </div>
+  <div class="div2">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Leo urna molestie at
+    elementum. Praesent elementum facilisis leo vel fringilla est ullamcorper.
+    Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Bibendum arcu
+    vitae elementum curabitur vitae nunc sed. Tincidunt eget nullam non nisi
+    est. Porttitor eget dolor morbi non arcu. Pellentesque elit eget gravida cum
+    sociis natoque penatibus et. A cras semper auctor neque vitae tempus. Nisl
+    tincidunt eget nullam non nisi. Cum sociis natoque penatibus et magnis dis.
+    Viverra aliquet eget sit amet tellus cras adipiscing enim. Dictumst quisque
+    sagittis purus sit amet volutpat consequat mauris. Felis imperdiet proin
+    fermentum leo vel orci. Posuere morbi leo urna molestie at. Magna fermentum
+    iaculis eu non. Vitae ultricies leo integer malesuada nunc vel. Rhoncus est
+    pellentesque elit ullamcorper dignissim cras tincidunt lobortis. A cras
+    semper auctor neque vitae tempus quam pellentesque nec.
+  </div>
+  <div class="div3">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Leo urna molestie at
+    elementum. Praesent elementum facilisis leo vel fringilla est ullamcorper.
+    Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Bibendum arcu
+    vitae elementum curabitur vitae nunc sed. Tincidunt eget nullam non nisi
+    est. Porttitor eget dolor morbi non arcu. Pellentesque elit eget gravida cum
+    sociis natoque penatibus et. A cras semper auctor neque vitae tempus. Nisl
+    tincidunt eget nullam non nisi. Cum sociis natoque penatibus et magnis dis.
+    Viverra aliquet eget sit amet tellus cras adipiscing enim. Dictumst quisque
+    sagittis purus sit amet volutpat consequat mauris. Felis imperdiet proin
+    fermentum leo vel orci. Posuere morbi leo urna molestie at. Magna fermentum
+    iaculis eu non. Vitae ultricies leo integer malesuada nunc vel. Rhoncus est
+    pellentesque elit ullamcorper dignissim cras tincidunt lobortis. A cras
+    semper auctor neque vitae tempus quam pellentesque nec.
+  </div>
+  <div class="div4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Leo urna molestie at
+    elementum. Praesent elementum facilisis leo vel fringilla est ullamcorper.
+    Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Bibendum arcu
+    vitae elementum curabitur vitae nunc sed. Tincidunt eget nullam non nisi
+    est. Porttitor eget dolor morbi non arcu. Pellentesque elit eget gravida cum
+    sociis natoque penatibus et. A cras semper auctor neque vitae tempus. Nisl
+    tincidunt eget nullam non nisi.
+  </div>
+  <div class="div5">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Leo urna molestie at
+    elementum. Praesent elementum facilisis leo vel fringilla est ullamcorper.
+    Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Bibendum arcu
+    vitae elementum curabitur vitae nunc sed. Tincidunt eget nullam non nisi
+    est.
+  </div>
 </div>
 
 <style>
   .parent {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-    grid-column-gap: 20px; /* Ajustez cette valeur pour les espaces entre les colonnes */
-    grid-row-gap: 20px; /* Ajustez cette valeur pour les espaces entre les lignes */
-    width: 100%; /* Ajustez cette valeur pour la largeur totale de la grille */
-    height: 100vh; /* Ajustez cette valeur pour la hauteur totale de la grille */
-    padding: 20px; /* Ajustez si vous voulez un padding autour de la grille */
+    grid-template-columns: 1fr; /* On commence par une colonne pour mobile */
+    grid-template-rows: auto; /* Hauteur automatique pour chaque ligne */
+    grid-gap: 10px; /* Espace entre les divs pour les mobiles */
+    width: 100%;
+    height: auto; /* Hauteur automatique pour l'empilement */
+    padding: 10px;
   }
 
   .div1,
@@ -28,34 +88,49 @@
       255,
       255,
       0.1
-    ); /* Un fond légèrement transparent pour bien voir le gradient */
-    border: 2px solid white; /* Bordure blanche */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Optionnel: ajoute un peu de glow autour de la div */
-    padding: 10px; /* Espacement intérieur pour ne pas coller au contenu */
+    ); /* Background commun pour chaque div */
+    border: 2px solid white; /* Bordure blanche pour chaque div */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Ombre légère pour le contraste */
+    padding: 10px;
   }
 
-  .div1 {
-    grid-area: 1 / 1 / 4 / 7;
-    /* Ajoutez d'autres propriétés de style ici si nécessaire */
+  /* Media Query pour des écrans plus grands, par exemple pour tablettes */
+  @media (min-width: 600px) {
+    .parent {
+      grid-template-columns: repeat(
+        6,
+        1fr
+      ); /* Retour à la grille 6x9 pour écrans plus grands */
+      grid-template-rows: repeat(9, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      height: 100vh; /* Hauteur fixe pour grands écrans */
+      padding: 20px;
+    }
+
+    .div1 {
+      grid-area: 1 / 1 / 4 / 7;
+    }
+
+    .div2 {
+      grid-area: 4 / 1 / 10 / 3;
+    }
+
+    .div3 {
+      grid-area: 4 / 3 / 8 / 7;
+    }
+
+    .div4 {
+      grid-area: 8 / 3 / 10 / 5;
+    }
+
+    .div5 {
+      grid-area: 8 / 5 / 10 / 7;
+    }
   }
 
-  .div2 {
-    grid-area: 4 / 1 / 10 / 3;
-    /* Ajoutez d'autres propriétés de style ici si nécessaire */
-  }
-
-  .div3 {
-    grid-area: 4 / 3 / 8 / 7;
-    /* Ajoutez d'autres propriétés de style ici si nécessaire */
-  }
-
-  .div4 {
-    grid-area: 8 / 3 / 10 / 5;
-    /* Ajoutez d'autres propriétés de style ici si nécessaire */
-  }
-
-  .div5 {
-    grid-area: 8 / 5 / 10 / 7;
-    /* Ajoutez d'autres propriétés de style ici si nécessaire */
+  /* Media Query pour des écrans encore plus grands, par exemple pour ordinateurs de bureau */
+  @media (min-width: 1024px) {
+    /* Vous pouvez ajouter des ajustements supplémentaires pour les écrans de bureau si nécessaire */
   }
 </style>
