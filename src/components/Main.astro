@@ -98,9 +98,9 @@
     grid-template-columns: 1fr; /* On commence par une colonne pour mobile */
     grid-template-rows: auto; /* Hauteur automatique pour chaque ligne */
     grid-gap: 10px; /* Espace entre les divs pour les mobiles */
-    width: 100%;
     height: auto; /* Hauteur automatique pour l'empilement */
     padding: 10px;
+    margin: 0 auto;
   }
 
   .bio,
@@ -170,6 +170,7 @@
   /* Media Query pour des écrans encore plus grands, par exemple pour ordinateurs de bureau */
   @media (min-width: 1024px) {
     /* Vous pouvez ajouter des ajustements supplémentaires pour les écrans de bureau si nécessaire */
+
     .bio,
     .skills,
     .portfolio,
@@ -187,6 +188,13 @@
     }
     .bio-img img {
       margin-left: 80px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    /* Vous pouvez ajouter des ajustements supplémentaires pour les écrans de bureau si nécessaire */
+    .parent {
+      width: 75%;
     }
   }
 </style>
