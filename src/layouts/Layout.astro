@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,29 +8,44 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script
+      src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+    ></script>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  :root {
+    --aspect-ratio: 4 / 1;
+    --header-scroll: calc(100vw / 4);
+    --title-height: 100px;
+    --shared-range: calc((var(--header-scroll) - var(--title-height)))
+      calc((var(--header-scroll) + (var(--title-height) * 2)));
+  }
+
+  body {
+    background: linear-gradient(220.55deg, #0b0a47 0%, #4643df 100%);
+    min-height: 200vh;
+    justify-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  h2,
+  h3 {
+    color: #e4b35a;
+  }
+
+  p {
+    color: #fff;
+  }
 </style>

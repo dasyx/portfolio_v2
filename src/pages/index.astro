@@ -14,10 +14,9 @@ import Main from "../components/Main.astro";
     <div class="title-wrapper">
       <div class="title">
         <h1>David Levast</h1>
-        <a href="#" rel="noreferrer noopener" target="_blank">Développeur web</a
-        >
+        <h2>Développeur web</h2>
       </div>
-      <div class="social px-5">
+      <div class="social px-7">
         <!-- <a href="https://twitter.com/davidlevast27" target="_blank"><iconify-icon icon="circum:twitter" style="color: white;" width="46" height="46"></iconify-icon></a> -->
         <a href="mailto:david.levast27@gmail.com" target="_blank"
           ><iconify-icon
@@ -55,21 +54,6 @@ import Main from "../components/Main.astro";
   @import "https://unpkg.com/open-props/normalize.min.css";
   @import "https://unpkg.com/open-props/open-props.min.css";
 
-  :root {
-    --aspect-ratio: 4 / 1;
-    --header-scroll: calc(100vw / 4);
-    --title-height: 100px;
-    --shared-range: calc((var(--header-scroll) - var(--title-height)))
-      calc((var(--header-scroll) + (var(--title-height) * 2)));
-  }
-
-  body {
-    background: linear-gradient(220.55deg, #0b0a47 0%, #4643df 100%);
-    min-height: 200vh;
-    justify-items: center;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
   header {
     background-size: cover;
     max-width: 100%;
@@ -107,6 +91,19 @@ import Main from "../components/Main.astro";
     100% {
       opacity: 1;
     }
+  }
+
+  h1 {
+    color: currentColor;
+    margin: 0;
+    @media screen and (max-width: 768px) {
+      color: var(--gray-0);
+    }
+  }
+
+  .title h2 {
+    font-size: 1.2em;
+    padding-left: 10px;
   }
 
   .avatar {
@@ -157,13 +154,6 @@ import Main from "../components/Main.astro";
       calc((var(--header-scroll) + (var(--title-height) * 0.25)));
   }
 
-  h1 {
-    color: currentColor;
-    @media screen and (max-width: 768px) {
-      color: var(--gray-0);
-    }
-  }
-
   @keyframes slide {
     to {
       color: var(--gray-0);
@@ -190,10 +180,6 @@ import Main from "../components/Main.astro";
     }
   }
 
-  .title h1 {
-    margin: 0;
-  }
-
   .title a {
     color: var(--red-6);
     font-weight: bold;
@@ -209,6 +195,10 @@ import Main from "../components/Main.astro";
     display: flex;
     align-items: center;
     margin: 0 auto;
+  }
+
+  .social a {
+    margin: 0 var(--size-1);
   }
 
   @media (min-width: 768px) {
