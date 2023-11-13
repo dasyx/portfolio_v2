@@ -1,0 +1,61 @@
+<div class="parent">
+  <div class="div1">Contenu de div1</div>
+  <div class="div2">Contenu de div2</div>
+  <div class="div3">Contenu de div3</div>
+  <div class="div4">Contenu de div4</div>
+  <div class="div5">Contenu de div5</div>
+</div>
+
+<style>
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 20px; /* Ajustez cette valeur pour les espaces entre les colonnes */
+    grid-row-gap: 20px; /* Ajustez cette valeur pour les espaces entre les lignes */
+    width: 100%; /* Ajustez cette valeur pour la largeur totale de la grille */
+    height: 100vh; /* Ajustez cette valeur pour la hauteur totale de la grille */
+    padding: 20px; /* Ajustez si vous voulez un padding autour de la grille */
+  }
+
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5 {
+    background: rgba(
+      255,
+      255,
+      255,
+      0.1
+    ); /* Un fond légèrement transparent pour bien voir le gradient */
+    border: 2px solid white; /* Bordure blanche */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Optionnel: ajoute un peu de glow autour de la div */
+    padding: 10px; /* Espacement intérieur pour ne pas coller au contenu */
+  }
+
+  .div1 {
+    grid-area: 1 / 1 / 4 / 7;
+    /* Ajoutez d'autres propriétés de style ici si nécessaire */
+  }
+
+  .div2 {
+    grid-area: 4 / 1 / 10 / 3;
+    /* Ajoutez d'autres propriétés de style ici si nécessaire */
+  }
+
+  .div3 {
+    grid-area: 4 / 3 / 8 / 7;
+    /* Ajoutez d'autres propriétés de style ici si nécessaire */
+  }
+
+  .div4 {
+    grid-area: 8 / 3 / 10 / 5;
+    /* Ajoutez d'autres propriétés de style ici si nécessaire */
+  }
+
+  .div5 {
+    grid-area: 8 / 5 / 10 / 7;
+    /* Ajoutez d'autres propriétés de style ici si nécessaire */
+  }
+</style>

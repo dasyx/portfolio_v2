@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-
+import Main from "../components/Main.astro";
 //import Card from '../components/Card.astro';
 ---
 
@@ -45,35 +45,9 @@ import Header from "../components/Header.astro";
       </div>
     </div>
   </div>
-  <!-- <main>
-    <ul>
-      <li class="skeleton">
-        <div class="skeleton__block"></div>
-        <div class="skeleton__block"></div>
-        <div class="skeleton__block"></div>
-      </li>
-      <li class="skeleton">
-        <div class="skeleton__block"></div>
-        <div class="skeleton__block"></div>
-        <div class="skeleton__block"></div>
-      </li>
-      <li class="skeleton">
-        <div class="skeleton__block"></div>
-        <div class="skeleton__block"></div>
-        <div class="skeleton__block"></div>
-      </li>
-      <li class="skeleton">
-        <div class="skeleton__block"></div>
-        <div class="skeleton__block"></div>
-        <div class="skeleton__block"></div>
-      </li>
-      <li class="skeleton">
-        <div class="skeleton__block"></div>
-        <div class="skeleton__block"></div>
-        <div class="skeleton__block"></div>
-      </li>
-    </ul>
-  </main> -->
+  <main>
+    <Main />
+  </main>
 </Layout>
 
 <style>
@@ -174,7 +148,6 @@ import Header from "../components/Header.astro";
   }
 
   main {
-    width: var(--size-md);
     max-width: 100%;
   }
 
@@ -207,7 +180,6 @@ import Header from "../components/Header.astro";
 
   .title-wrapper {
     display: flex;
-    justify-content: space-around;
     background: linear-gradient(220.55deg, #0b0a47 0%, #4643df 100%);
     position: relative;
     width: auto;
@@ -234,50 +206,6 @@ import Header from "../components/Header.astro";
     font-weight: bold;
   }
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  ul {
-    padding-top: var(--size-8);
-    display: grid;
-    gap: var(--size-4);
-  }
-
-  .skeleton {
-    --surface: var(--surface-2);
-    --block: var(--surface-3);
-    --padding: var(--size-4);
-    padding: var(--padding);
-    gap: var(--padding);
-    width: 100%;
-    display: grid;
-    grid-template: 1fr 1fr / 25% 1fr;
-    background: var(--surface);
-    max-inline-size: 100%;
-  }
-
-  .skeleton__block {
-    background: var(--block);
-  }
-
-  @keyframes load {
-    to {
-      background-position: 200% 0;
-    }
-  }
-
-  .skeleton__block:first-of-type {
-    grid-row: 1 / -1;
-    aspect-ratio: 1;
-  }
-
-  .skeleton__block:last-of-type {
-    width: 65%;
-  }
-
   .header-container {
     flex-direction: column;
     align-items: center;
@@ -294,11 +222,11 @@ import Header from "../components/Header.astro";
     .title-wrapper {
       width: 100vw;
     }
-    /* .header-container {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-    } */
+    .social {
+      position: absolute;
+      top: 25%;
+      right: 0;
+    }
   }
   @media (max-width: 768px) {
     .title-wrapper {
