@@ -1,7 +1,7 @@
 <div class="parent">
   <section class="bio">
-    <h3 class="my-6">À PROPOS DE MOI</h3>
     <div class="bio-text">
+      <h3 class="my-6">À PROPOS DE MOI</h3>
       <p class="mb-6">
         <strong>Artisan du web</strong>, je transforme les concepts en réalités
         numériques captivantes. Avec un mélange de créativité et de rigueur
@@ -23,7 +23,9 @@
         code est une étape vers l'excellence.
       </p>
     </div>
-    <div class="bio-img"></div>
+    <div class="bio-img">
+      <img src="../../public/code_thinking.svg" alt="Description de l'image" />
+    </div>
   </section>
   <section class="skills">
     <h3>Skills</h3>
@@ -106,6 +108,8 @@
   .portfolio,
   .progress,
   .copywright {
+    display: flex;
+    flex-direction: column;
     background: rgba(
       255,
       255,
@@ -117,8 +121,19 @@
     padding: 10px;
   }
 
+  .bio-text {
+    margin-bottom: 60px;
+  }
+  .bio-text p,
+  .bio-text h3 {
+    margin-left: 20px;
+  }
+  .bio-img img {
+    margin: 0 auto;
+    width: 75%;
+  }
   /* Media Query pour des écrans plus grands, par exemple pour tablettes */
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     .parent {
       grid-template-columns: repeat(
         6,
@@ -127,7 +142,7 @@
       grid-template-rows: repeat(9, 1fr);
       grid-column-gap: 20px;
       grid-row-gap: 20px;
-      height: 100vh; /* Hauteur fixe pour grands écrans */
+      height: auto; /* Hauteur fixe pour grands écrans */
       padding: 20px;
     }
 
@@ -155,5 +170,23 @@
   /* Media Query pour des écrans encore plus grands, par exemple pour ordinateurs de bureau */
   @media (min-width: 1024px) {
     /* Vous pouvez ajouter des ajustements supplémentaires pour les écrans de bureau si nécessaire */
+    .bio,
+    .skills,
+    .portfolio,
+    .progress,
+    .copywright {
+      flex-direction: row;
+      align-items: center;
+    }
+    .bio {
+      padding-bottom: 50px;
+    }
+    .bio-text p,
+    .bio-text h3 {
+      margin-left: 20px;
+    }
+    .bio-img img {
+      margin-left: 80px;
+    }
   }
 </style>
