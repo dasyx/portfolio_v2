@@ -60,9 +60,7 @@ import Main from "../components/Main.astro";
     width: 100%;
     min-height: 200px;
     height: 20vh;
-    aspect-ratio: var(--aspect-ratio);
     position: relative;
-    view-timeline-name: --header;
     position: sticky;
     top: calc((var(--header-scroll) * -1) + var(--title-height));
     display: flex;
@@ -108,7 +106,6 @@ import Main from "../components/Main.astro";
 
   .avatar {
     width: var(--size-12);
-    aspect-ratio: 1;
     border-radius: 50%;
     border: var(--size-2) solid var(--surface-1);
     position: absolute;
