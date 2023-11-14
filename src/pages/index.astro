@@ -11,7 +11,7 @@ import Main from "../components/Main.astro";
   </header>
   <div class="intro">
     <img src="/photo_main-removebg-preview.png" alt="" class="avatar" />
-    <!-- <div class="title-wrapper">
+    <div class="title-wrapper">
       <div class="title">
         <h1>David Levast</h1>
         <h2>Développeur web</h2>
@@ -41,7 +41,7 @@ import Main from "../components/Main.astro";
             height="38"></iconify-icon></a
         >
       </div>
-    </div> -->
+    </div>
   </div>
   <main>
     <Main />
@@ -139,7 +139,6 @@ import Main from "../components/Main.astro";
 
   .title {
     color: var(--gray-11);
-    width: var(--size-md);
     height: var(--title-height);
     /*   display: grid; */
     gap: var(--size-2);
@@ -207,9 +206,33 @@ import Main from "../components/Main.astro";
       right: 0;
     }
   }
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .title-wrapper {
-      flex-direction: column;
+      flex-direction: column; /* Empile les éléments verticalement sur les petits écrans */
+      width: 100%; /* Assurez-vous que la div occupe toute la largeur */
+      transform: translateX(
+        0
+      ); /* Ajuste ou supprime la transformation si elle n'est pas nécessaire */
+      box-shadow: none; /* Optionnel: supprime l'ombre pour un look plus simple sur les petits écrans */
+    }
+
+    .title {
+      text-align: center; /* Centre le texte sur les petits écrans */
+    }
+
+    .social {
+      justify-content: center; /* Centre les icônes sociales sur les petits écrans */
+      position: relative; /* Ajuste la position si nécessaire */
+      top: 0;
+      right: 0;
+    }
+
+    .avatar {
+      /* Ajustez la taille et la position de l'avatar pour les petits écrans */
+      width: var(--size-8); /* Exemple de taille plus petite */
+      top: 10%; /* Ajustez la position verticale */
+      left: 50%; /* Centre horizontalement */
+      transform: translate(-50%, -50%); /* Ajuste pour centrer parfaitement */
     }
   }
 </style>
