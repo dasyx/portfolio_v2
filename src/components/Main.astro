@@ -147,13 +147,13 @@
             width="32"
             height="32"></iconify-icon>GitHub
         </li>
-        <li>
+        <!-- <li>
           <iconify-icon
             icon="devicon:canva"
             style="color: black;"
             width="32"
             height="32"></iconify-icon>Canva
-        </li>
+        </li> -->
       </ul>
     </div>
     <div class="hosting">
@@ -282,16 +282,51 @@
     margin-left: 20px;
   }
   .skills h4 {
-    padding-left: 10px;
+    padding-left: 20px;
+    margin-bottom: 10px;
   }
   .skills div ul {
-    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
   }
   .skills div ul li {
-    margin: 15px 0;
+    margin: 10px 0;
+  }
+  .skills ul li {
+    display: flex;
+    align-items: center;
   }
 
-  /* Media Query pour des écrans plus grands, par exemple pour tablettes */
+  .skills iconify-icon {
+    margin-right: 8px;
+  }
+
+  @media (max-width: 523px) {
+    .skills div ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .skills div ul li {
+      flex: 0 0 50%; /* Chaque élément prend 50% de la largeur */
+      margin: 15px 0;
+    }
+  }
+
+  @media (min-width: 524px) and (max-width: 767px) {
+    .skills div ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .skills div ul li {
+      flex:
+        0 0 33,
+        33%; /* Chaque élément prend 50% de la largeur */
+      margin: 15px 0;
+      padding: 0 20px;
+    }
+  }
+
   @media (min-width: 768px) {
     .parent {
       grid-template-columns: repeat(
@@ -326,6 +361,31 @@
     }
   }
 
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .bio-text p,
+    .bio-text h3 {
+      margin-left: 60px;
+    }
+    .bio-text {
+      line-height: 2em;
+    }
+    .bio-img {
+      margin-top: 50px;
+    }
+    .bio-img img {
+      margin-top: 20px;
+      height: auto; /* Pour maintenir le ratio */
+    }
+    .skills div ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .skills div ul li {
+      flex: 0 0 50%; /* Chaque élément prend 50% de la largeur */
+      margin: 15px 0;
+    }
+  }
+
   /* Media Query pour des écrans encore plus grands, par exemple pour ordinateurs de bureau */
   @media (min-width: 1024px) {
     /* Vous pouvez ajouter des ajustements supplémentaires pour les écrans de bureau si nécessaire */
@@ -345,22 +405,17 @@
     .bio-text {
       padding-left: 20px;
     }
-  }
 
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .bio-text p,
-    .bio-text h3 {
-      margin-left: 60px;
+    .skills div ul {
+      flex-direction: row;
+      flex-wrap: wrap;
     }
-    .bio-text {
-      line-height: 2em;
-    }
-    .bio-img {
-      margin-top: 50px;
-    }
-    .bio-img img {
-      margin-top: 20px;
-      height: auto; /* Pour maintenir le ratio */
+    .skills div ul li {
+      flex:
+        0 0 33,
+        33 %; /* Chaque élément prend 50% de la largeur */
+      margin: 15px 0;
+      padding: 0 10px;
     }
   }
 
@@ -369,12 +424,16 @@
     .parent {
       width: 85%;
     }
-    .bio-text {
+    .bio-text,
+    .skills {
       padding: 20px 0 0 30px;
       line-height: 2em;
     }
     .bio-img img {
       width: 75%;
+    }
+    .skills div {
+      margin: 30px 0;
     }
   }
 </style>
