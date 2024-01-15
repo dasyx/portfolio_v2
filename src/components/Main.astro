@@ -37,7 +37,7 @@ import Portfolio from "../components/Portfolio.svelte";
   <!-- SECTION SKILLS -->
   <section class="skills">
     <h3 class="mt-6 mb-10">COMPETENCES</h3>
-    <div class="basic-languages mt-6 mb-14">
+    <div class="basic-languages mt-6 mb-24">
       <h4 class="font-bold">Fondamentaux</h4>
       <ul>
         <li>
@@ -56,7 +56,7 @@ import Portfolio from "../components/Portfolio.svelte";
         </li>
       </ul>
     </div>
-    <div class="frameworks_js mb-10">
+    <div class="frameworks_js mb-24">
       <h4 class="font-bold">Frameworks JS</h4>
       <ul>
         <li>
@@ -75,7 +75,7 @@ import Portfolio from "../components/Portfolio.svelte";
         </li>
       </ul>
     </div>
-    <div class="framework_css mb-10">
+    <div class="framework_css mb-24">
       <h4 class="font-bold">Frameworks CSS</h4>
       <ul>
         <li>
@@ -96,7 +96,7 @@ import Portfolio from "../components/Portfolio.svelte";
         </li>
       </ul>
     </div>
-    <div class="database mb-10">
+    <div class="database mb-24">
       <h4 class="font-bold">Bases de données</h4>
       <ul>
         <li>
@@ -115,7 +115,7 @@ import Portfolio from "../components/Portfolio.svelte";
         </li>
       </ul>
     </div>
-    <div class="build-tools mb-10">
+    <div class="build-tools mb-24">
       <h4 class="font-bold">Outils de Build et SSG</h4>
       <ul>
         <li>
@@ -134,7 +134,7 @@ import Portfolio from "../components/Portfolio.svelte";
         </li>
       </ul>
     </div>
-    <div class="tools mb-10">
+    <div class="tools mb-24">
       <h4 class="font-bold">Outils Divers</h4>
       <ul>
         <li>
@@ -217,9 +217,10 @@ import Portfolio from "../components/Portfolio.svelte";
   <!-- FIN SECTION SKILLS -->
 
   <section class="portfolio">
-    <h3>Portfolio</h3>
+    <h3>PORTFOLIO</h3>
     <Portfolio />
   </section>
+
   <section class="progress">
     <h3>In progress</h3>
     <p>
@@ -347,6 +348,31 @@ import Portfolio from "../components/Portfolio.svelte";
     margin-right: 8px;
   }
 
+  /* SECTION PORTFOLIO
+  ================================ */
+
+  .portfolio {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+  }
+
+  .portfolio h3 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 10px; /* Ajuster selon les besoins pour le positionnement exact */
+  }
+
+  .portfolio-container {
+    padding-left: 1.2em;
+  }
+
+  /* MEDIA QUERIES
+  ================================ */
+
   @media (max-width: 523px) {
     .skills div ul {
       flex-direction: row;
@@ -379,31 +405,54 @@ import Portfolio from "../components/Portfolio.svelte";
         6,
         1fr
       ); /* Retour à la grille 6x9 pour écrans plus grands */
-      grid-template-rows: repeat(9, 1fr);
+      /* grid-template-rows: repeat(9, 1fr); */
       grid-column-gap: 20px;
       grid-row-gap: 20px;
-      height: auto; /* Hauteur fixe pour grands écrans */
       padding: 20px;
     }
 
     .bio {
-      grid-area: 1 / 1 / 4 / 7;
+      grid-area: 1 / 1 / 2 / 7;
+      /* 1 / 1 / 2 / 7 signifie :
+     - Début sur la 1ère rangée (ligne de départ)
+     - Début sur la 1ère colonne (colonne de départ)
+     - Étendre jusqu'à la 2ème rangée (juste avant la ligne de fin)
+     - Étendre jusqu'à la 7ème colonne (juste avant la colonne de fin)
+  */
     }
 
     .skills {
-      grid-area: 4 / 1 / 10 / 3;
+      grid-area: 2 / 1 / 4 / 3;
+      /* 2 / 1 / 4 / 3 signifie :
+     - Début sur la 2ème rangée
+     - Début sur la 1ère colonne
+     - Étendre jusqu'à la 4ème rangée
+     - Étendre jusqu'à la 3ème colonne
+  */
     }
 
     .portfolio {
-      grid-area: 4 / 3 / 8 / 7;
+      grid-area: 2 / 3 / 4 / 7;
+      /* 2 / 3 / 4 / 7 signifie :
+     - Début sur la 2ème rangée
+     - Début sur la 3ème colonne
+     - Étendre jusqu'à la 4ème rangée
+     - Étendre jusqu'à la 7ème colonne
+  */
     }
 
     .progress {
-      grid-area: 8 / 3 / 10 / 5;
+      grid-area: 4 / 1 / 4 / 5; /* Ajustez ces valeurs selon la position des éléments précédents */
+      /* 4 / 1 / 6 / 5 signifie :
+     - Début sur la 4ème rangée
+     - Début sur la 1ère colonne
+     - Étendre jusqu'à la 4ème rangée
+     - Étendre jusqu'à la 5ème colonne
+  */
     }
 
     .copyright {
-      grid-area: 8 / 5 / 10 / 7;
+      grid-area: 4 / 5 / 4 / 7; /* Ajustez ces valeurs de la même manière */
     }
   }
 
@@ -437,7 +486,6 @@ import Portfolio from "../components/Portfolio.svelte";
     /* Vous pouvez ajouter des ajustements supplémentaires pour les écrans de bureau si nécessaire */
 
     .bio,
-    .portfolio,
     .progress,
     .copyright {
       flex-direction: row;
@@ -467,9 +515,6 @@ import Portfolio from "../components/Portfolio.svelte";
 
   @media (min-width: 1440px) {
     /* Vous pouvez ajouter des ajustements supplémentaires pour les écrans de bureau si nécessaire */
-    .parent {
-      width: 85%;
-    }
     .bio-text,
     .skills {
       padding: 20px 0 0 30px;
@@ -479,7 +524,7 @@ import Portfolio from "../components/Portfolio.svelte";
       width: 75%;
     }
     .skills div {
-      margin: 30px 0;
+      margin: 50px 0;
     }
   }
 </style>
