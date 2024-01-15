@@ -36,11 +36,14 @@
   class="portfolio-container grid grid-cols-4 md:grid-cols-6 sm:grid-cols-12"
 >
   {#each projets as projet}
-    <div class="mt-8 mb-20 col-span-4 md:col-span-6 sm:col-span-12 xl:ml-10">
+    <div
+      class="col-span-4 sm:col-span-12 mb-4 md:col-span-6 lg:pl-6 mb-19 mt-32"
+    >
       <div class="flex flex-col md:flex-row">
         <!-- Modifier ici la classe de hauteur ou ajouter un style personnalisé -->
         <figure
-          class="group relative overflow-hidden blur-on-hover w-full md:w-1/3 h-64"
+          class="group relative overflow-hidden blur-on-hover w-full md:w-3/4 h-64
+          lg:w-1/3"
         >
           <!-- Exemple avec h-64 -->
           <img

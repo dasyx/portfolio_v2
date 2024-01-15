@@ -36,7 +36,7 @@ import Portfolio from "../components/Portfolio.svelte";
 
   <!-- SECTION SKILLS -->
   <section class="skills">
-    <h3 class="mt-6 mb-10">COMPETENCES</h3>
+    <h3 class="mt-11 mb-10 ml-6">COMPETENCES</h3>
     <div class="basic-languages mt-6 mb-24">
       <h4 class="font-bold">Fondamentaux</h4>
       <ul>
@@ -217,7 +217,7 @@ import Portfolio from "../components/Portfolio.svelte";
   <!-- FIN SECTION SKILLS -->
 
   <section class="portfolio">
-    <h3>PORTFOLIO</h3>
+    <h3 class="mt-9 mb-10 ml-6">PORTFOLIO</h3>
     <Portfolio />
   </section>
 
@@ -324,9 +324,7 @@ import Portfolio from "../components/Portfolio.svelte";
   .skills {
     flex-direction: column;
   }
-  .skills h3 {
-    margin-left: 20px;
-  }
+
   .skills h4 {
     padding-left: 20px;
     margin-bottom: 10px;
@@ -361,9 +359,8 @@ import Portfolio from "../components/Portfolio.svelte";
 
   .portfolio h3 {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    margin: 10px; /* Ajuster selon les besoins pour le positionnement exact */
+    top: 30px;
+    left: 30px;
   }
 
   .portfolio-container {
@@ -405,7 +402,7 @@ import Portfolio from "../components/Portfolio.svelte";
         6,
         1fr
       ); /* Retour à la grille 6x9 pour écrans plus grands */
-      /* grid-template-rows: repeat(9, 1fr); */
+      /* grid-template-rows: repeat(6, 1fr); */
       grid-column-gap: 20px;
       grid-row-gap: 20px;
       padding: 20px;
@@ -456,7 +453,7 @@ import Portfolio from "../components/Portfolio.svelte";
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 769px) and (max-width: 1023px) {
     .bio-text p,
     .bio-text h3 {
       margin-left: 60px;
