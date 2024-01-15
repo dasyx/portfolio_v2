@@ -2,32 +2,32 @@
   // On peut utiliser la prop 'projets' dans le script
   export const projets = [
     {
-      imgSrc: "https://picsum.photos/200/300",
-      altText: "Image 1",
-      projectUrl: "https://google.com",
-      codeUrl: "https://github.com",
-      technologies: ["HTML", "CSS", "JS"],
+      imgSrc: "/projects-img/groupomania.webp",
+      altText: "groupomania",
+      projectUrl: "https://groupo-frontend.vercel.app/",
+      codeUrl: "https://github.com/dasyx/groupo_backend",
+      technologies: ["VUE", "SASS", "BULMA", "NODE", "MYSQL"],
     },
     {
-      imgSrc: "https://picsum.photos/200/300",
-      altText: "Image 2",
-      projectUrl: "https://google.com",
-      codeUrl: "https://github.com",
-      technologies: ["HTML", "CSS", "JS"],
+      imgSrc: "/projects-img/mlindustrie.webp",
+      altText: "mlindustrie",
+      projectUrl: "https://mlindustrie.fr",
+      codeUrl: "https://github.com/dasyx/mlindustrie_local",
+      technologies: ["VUE", "SASS", "NODE", "MONGODB"],
     },
     {
-      imgSrc: "https://picsum.photos/200/300",
-      altText: "Image 3",
-      projectUrl: "https://google.com",
-      codeUrl: "https://github.com",
-      technologies: ["HTML", "CSS", "JS"],
+      imgSrc: "/projects-img/pasquier.webp",
+      altText: "pasquier",
+      projectUrl: "https://meublesgerardpasquier.fr/",
+      codeUrl: "https://github.com/dasyx/meubles_gerard_pasquier",
+      technologies: ["HTML", "CSS", "JS", "PARCEL"],
     },
     {
-      imgSrc: "https://picsum.photos/200/300",
-      altText: "Image 4",
-      projectUrl: "https://google.com",
-      codeUrl: "https://github.com",
-      technologies: ["HTML", "CSS", "JS"],
+      imgSrc: "/projects-img/scribe.webp",
+      altText: "scribe",
+      projectUrl: "https://majestic-tarsier-2ac220.netlify.app",
+      codeUrl: "https://github.com/dasyx/client_scribe",
+      technologies: ["SVELTE", "TAILWIND", "SUPABASE"],
     },
   ];
 </script>
@@ -103,7 +103,7 @@ bg-gray-800 bg-opacity-60 flex items-center justify-center"
     filter: blur(5px); /* Ajustez la valeur du flou selon vos préférences */
   }
   .portfolio-container {
-    margin-top: 10rem;
+    margin-top: 12rem;
   }
   .portfolio-container figure {
     margin-bottom: 1rem;
