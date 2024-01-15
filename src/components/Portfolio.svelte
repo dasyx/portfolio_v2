@@ -37,7 +37,7 @@
 >
   {#each projets as projet}
     <div
-      class="col-span-4 sm:col-span-12 mb-4 md:col-span-6 lg:pl-6 mb-19 mt-32"
+      class="col-span-4 sm:col-span-12 mb-36 mt-38 md:col-span-6 mb-42 lg:pl-6 mb-19 mt-39"
     >
       <div class="flex flex-col md:flex-row">
         <!-- Modifier ici la classe de hauteur ou ajouter un style personnalisé -->
@@ -101,5 +101,11 @@ bg-gray-800 bg-opacity-60 flex items-center justify-center"
   }
   .blur-on-hover:hover img {
     filter: blur(5px); /* Ajustez la valeur du flou selon vos préférences */
+  }
+  .portfolio-container {
+    margin-top: 10rem;
+  }
+  .portfolio-container figure {
+    margin-bottom: 1rem;
   }
 </style>

@@ -216,8 +216,8 @@ import Portfolio from "../components/Portfolio.svelte";
 
   <!-- FIN SECTION SKILLS -->
 
-  <section class="portfolio">
-    <h3 class="mt-9 mb-10 ml-6">PORTFOLIO</h3>
+  <section class="portfolio relative">
+    <h3 class="absolute top-16 left-12">PORTFOLIO</h3>
     <Portfolio />
   </section>
 
@@ -350,21 +350,8 @@ import Portfolio from "../components/Portfolio.svelte";
   ================================ */
 
   .portfolio {
-    display: flex;
-    position: relative;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 100vh;
-  }
-
-  .portfolio h3 {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-  }
-
-  .portfolio-container {
-    padding-left: 1.2em;
   }
 
   /* MEDIA QUERIES
