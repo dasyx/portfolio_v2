@@ -1,3 +1,7 @@
+---
+import Portfolio from "../components/Portfolio.svelte";
+---
+
 <div class="parent">
   <!-- SECTION A PROPOS -->
   <section class="bio">
@@ -138,7 +142,7 @@
             icon="cib:visual-studio-code"
             style="color: black;"
             width="32"
-            height="32"></iconify-icon>Visual Studio Code
+            height="32"></iconify-icon>VS Code
         </li>
         <li>
           <iconify-icon
@@ -146,6 +150,13 @@
             style="color: black;"
             width="32"
             height="32"></iconify-icon>GitHub
+        </li>
+        <li>
+          <iconify-icon
+            icon="grommet-icons:vmware"
+            style="color: black;"
+            width="32"
+            height="32"></iconify-icon>VMWare
         </li>
         <!-- <li>
           <iconify-icon
@@ -156,7 +167,7 @@
         </li> -->
       </ul>
     </div>
-    <div class="hosting">
+    <div class="hosting mb-10">
       <h4 class="font-bold">Hébergement</h4>
       <ul>
         <li>
@@ -173,6 +184,32 @@
             width="32"
             height="32"></iconify-icon>Vercel
         </li>
+        <li>
+          <iconify-icon
+            icon="logos:heroku-icon"
+            style="color: black;"
+            width="32"
+            height="32"></iconify-icon>Heroku
+        </li>
+      </ul>
+    </div>
+    <div class="cms mb-10">
+      <h4 class="font-bold">CMS</h4>
+      <ul>
+        <li>
+          <iconify-icon
+            icon="logos:wordpress-icon"
+            style="color: black;"
+            width="32"
+            height="32"></iconify-icon>WordPress
+        </li>
+        <li>
+          <iconify-icon
+            icon="logos:prismic-icon"
+            style="color: black;"
+            width="32"
+            height="32"></iconify-icon>Prismic
+        </li>
       </ul>
     </div>
   </section>
@@ -181,23 +218,7 @@
 
   <section class="portfolio">
     <h3>Portfolio</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Leo urna molestie at
-      elementum. Praesent elementum facilisis leo vel fringilla est ullamcorper.
-      Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Bibendum arcu
-      vitae elementum curabitur vitae nunc sed. Tincidunt eget nullam non nisi
-      est. Porttitor eget dolor morbi non arcu. Pellentesque elit eget gravida
-      cum sociis natoque penatibus et. A cras semper auctor neque vitae tempus.
-      Nisl tincidunt eget nullam non nisi. Cum sociis natoque penatibus et
-      magnis dis. Viverra aliquet eget sit amet tellus cras adipiscing enim.
-      Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Felis
-      imperdiet proin fermentum leo vel orci. Posuere morbi leo urna molestie
-      at. Magna fermentum iaculis eu non. Vitae ultricies leo integer malesuada
-      nunc vel. Rhoncus est pellentesque elit ullamcorper dignissim cras
-      tincidunt lobortis. A cras semper auctor neque vitae tempus quam
-      pellentesque nec.
-    </p>
+    <Portfolio />
   </section>
   <section class="progress">
     <h3>In progress</h3>
@@ -211,8 +232,8 @@
       cum sociis natoque penatibus et.
     </p>
   </section>
-  <section class="copywright">
-    <h3>Copywright</h3>
+  <section class="copyright">
+    <h3>copyright</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Leo urna molestie at
@@ -250,7 +271,7 @@
   .skills:hover,
   .portfolio:hover,
   .progress:hover,
-  .copywright:hover {
+  .copyright:hover {
     background-color: rgba(
       255,
       255,
@@ -263,7 +284,7 @@
   .skills,
   .portfolio,
   .progress,
-  .copywright {
+  .copyright {
     display: flex;
     flex-direction: column;
     background: rgba(
@@ -341,6 +362,7 @@
     .skills div ul {
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: space-evenly;
     }
     .skills div ul li {
       flex:
@@ -380,7 +402,7 @@
       grid-area: 8 / 3 / 10 / 5;
     }
 
-    .copywright {
+    .copyright {
       grid-area: 8 / 5 / 10 / 7;
     }
   }
@@ -417,7 +439,7 @@
     .bio,
     .portfolio,
     .progress,
-    .copywright {
+    .copyright {
       flex-direction: row;
       align-items: center;
     }
@@ -438,8 +460,8 @@
       flex:
         0 0 33,
         33 %; /* Chaque élément prend 50% de la largeur */
-      margin: 15px 0;
-      padding: 0 10px;
+      margin: 20px 0;
+      padding: 0 30px;
     }
   }
 
