@@ -116,7 +116,6 @@
             >
           {/each}
           <div class="label-et-listes">
-            <span class="label">En savoir plus</span>
             <ul class="listes-a-puces">
               {#each projet.mustsees as mustsee}
                 <li>{mustsee}</li>
@@ -133,6 +132,14 @@
   figure {
     transition: all 0.5s ease;
     z-index: 10;
+    -webkit-box-shadow: 0px 0px 55px 23px rgba(46, 116, 255, 0.9);
+    -moz-box-shadow: 0px 0px 55px 23px rgba(46, 116, 255, 0.9);
+    box-shadow: 0px 0px 55px 23px rgba(46, 116, 255, 0.9);
+    margin-right: 30px;
+  }
+  figure img {
+    border: blanchedalmond 1px solid;
+    border-radius: 5px;
   }
   .blur-on-hover {
     transition: filter 0.5s ease;
