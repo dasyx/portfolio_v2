@@ -74,9 +74,9 @@
     <div
       class="col-span-4 sm:col-span-12 md:col-span-6 lg:pl-6 project-item project-{index}"
     >
-      <div class="flex flex-col lg:flex-row">
+      <div class="flex flex-col xl:flex-row">
         <figure
-          class="group relative overflow-hidden blur-on-hover w-full h-64 lg:w-1/3"
+          class="group relative overflow-hidden blur-on-hover w-full h-64 lg:w-1/2"
         >
           <img
             src={projet.imgSrc}
