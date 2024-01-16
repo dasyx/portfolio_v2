@@ -217,7 +217,6 @@ import Portfolio from "../components/Portfolio.svelte";
   <!-- FIN SECTION SKILLS -->
 
   <section class="portfolio relative">
-    <h3 class="absolute top-16 left-12">PORTFOLIO</h3>
     <Portfolio />
   </section>
 
@@ -283,11 +282,23 @@ import Portfolio from "../components/Portfolio.svelte";
 
   .bio,
   .skills,
-  .portfolio,
   .progress,
   .copyright {
     display: flex;
     flex-direction: column;
+    background: rgba(
+      255,
+      255,
+      255,
+      0.1
+    ); /* Background commun pour chaque div */
+    border: 2px solid white; /* Bordure blanche pour chaque div */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Ombre légère pour le contraste */
+    padding: 10px;
+  }
+
+  .portfolio {
+    display: flex;
     background: rgba(
       255,
       255,
@@ -344,14 +355,6 @@ import Portfolio from "../components/Portfolio.svelte";
 
   .skills iconify-icon {
     margin-right: 8px;
-  }
-
-  /* SECTION PORTFOLIO
-  ================================ */
-
-  .portfolio {
-    flex-direction: column;
-    justify-content: space-around;
   }
 
   /* MEDIA QUERIES
