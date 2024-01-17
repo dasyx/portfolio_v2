@@ -1,5 +1,7 @@
 ---
 import Portfolio from "../components/Portfolio.svelte";
+import Playground from "../components/Playground.svelte";
+import Artwork from "../components/Artwork.svelte";
 ---
 
 <div class="parent">
@@ -229,28 +231,11 @@ import Portfolio from "../components/Portfolio.svelte";
     <Portfolio />
   </section>
 
-  <section class="progress">
-    <h3>In progress</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Leo urna molestie at
-      elementum. Praesent elementum facilisis leo vel fringilla est ullamcorper.
-      Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Bibendum arcu
-      vitae elementum curabitur vitae nunc sed. Tincidunt eget nullam non nisi
-      est. Porttitor eget dolor morbi non arcu. Pellentesque elit eget gravida
-      cum sociis natoque penatibus et.
-    </p>
+  <section class="playground ralative">
+    <Playground />
   </section>
-  <section class="copyright">
-    <h3>copyright</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Leo urna molestie at
-      elementum. Praesent elementum facilisis leo vel fringilla est ullamcorper.
-      Curabitur vitae nunc sed velit dignissim sodales ut eu sem. Bibendum arcu
-      vitae elementum curabitur vitae nunc sed. Tincidunt eget nullam non nisi
-      est.
-    </p>
+  <section class="artwork relative">
+    <Artwork />
   </section>
 </div>
 
@@ -279,8 +264,8 @@ import Portfolio from "../components/Portfolio.svelte";
   .bio:hover,
   .skills:hover,
   .portfolio:hover,
-  .progress:hover,
-  .copyright:hover {
+  .playground:hover,
+  .artwork:hover {
     background-color: rgba(
       255,
       255,
@@ -291,8 +276,8 @@ import Portfolio from "../components/Portfolio.svelte";
 
   .bio,
   .skills,
-  .progress,
-  .copyright {
+  .playground,
+  .artwork {
     display: flex;
     flex-direction: column;
     background: rgba(
@@ -437,8 +422,8 @@ import Portfolio from "../components/Portfolio.svelte";
   */
     }
 
-    .progress {
-      grid-area: 4 / 1 / 4 / 5; /* Ajustez ces valeurs selon la position des éléments précédents */
+    .playground {
+      grid-area: 4 / 1 / 24 / 4; /* Ajustez ces valeurs selon la position des éléments précédents */
       /* 4 / 1 / 6 / 5 signifie :
      - Début sur la 4ème rangée
      - Début sur la 1ère colonne
@@ -447,8 +432,8 @@ import Portfolio from "../components/Portfolio.svelte";
   */
     }
 
-    .copyright {
-      grid-area: 4 / 5 / 4 / 7; /* Ajustez ces valeurs de la même manière */
+    .artwork {
+      grid-area: 4 / 4 / 24 / 7; /* Ajustez ces valeurs de la même manière */
     }
   }
 
@@ -482,7 +467,7 @@ import Portfolio from "../components/Portfolio.svelte";
     /* Vous pouvez ajouter des ajustements supplémentaires pour les écrans de bureau si nécessaire */
 
     .bio,
-    .progress,
+    .playground,
     .copyright {
       flex-direction: row;
       align-items: center;
