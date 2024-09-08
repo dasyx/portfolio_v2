@@ -51,18 +51,6 @@
         "Utilisation de Vite pour le bundling",
       ],
     },
-    /* {
-      imgSrc: "/projects-img/vocationa.webp",
-      altText: "vocationa",
-      projectUrl: "https://main--stellar-salamander-c473dd.netlify.app/",
-      codeUrl: "https://github.com/dasyx/vocationa",
-      technologies: ["SVELTE", "TAILWIND", "FAUNABD", "CLERK"],
-      mustsees: [
-        "Application web d'immersion professionnelle",
-        "Intégration du CRUD de FaunaDB",
-        "Utilisation de Clerk pour l'authentification",
-      ],
-    }, */
   ];
 </script>
 
@@ -136,36 +124,60 @@
     -moz-box-shadow: 0px 0px 55px 23px rgba(46, 116, 255, 0.9);
     box-shadow: 0px 0px 55px 23px rgba(46, 116, 255, 0.9);
     margin-right: 30px;
+    width: 100%; /* Assure que la figure occupe la largeur disponible */
   }
+
   figure img {
     border: blanchedalmond 1px solid;
     border-radius: 5px;
+    width: 100%; /* Assure que l'image occupe toute la largeur du conteneur */
+    height: 100%;
+    object-fit: cover;
   }
+
   .blur-on-hover {
     transition: filter 0.5s ease;
   }
+
   .blur-on-hover:hover img {
-    filter: blur(5px); /* Ajustez la valeur du flou selon vos préférences */
+    filter: blur(5px);
   }
+
   .portfolio-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
+
   .portfolio-container figure {
     margin-bottom: 1rem;
   }
+
   .project-0 {
     margin-top: 14rem;
   }
+
   .project-1,
   .project-2,
   .project-3 {
     margin-top: 3rem;
   }
-  .project-item:last-child {
-    margin-bottom: 0;
+
+  .project-item {
+    margin-bottom: 3rem;
   }
+
+  .project-item figure {
+    width: 100%; /* Occupe toujours toute la largeur disponible */
+  }
+
+  /* Ajout pour les très grands écrans (plus de 1920px) */
+  @media (min-width: 1920px) {
+    .project-item figure {
+      width: 50%; /* Garde les figures à 50% de largeur sur les très grands écrans */
+    }
+  }
+
   .label-et-listes {
     border-top: 1px solid #ccc;
     padding-top: 10px;
