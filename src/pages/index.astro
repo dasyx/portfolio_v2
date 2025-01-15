@@ -12,35 +12,36 @@ import Main from "../components/Main.astro";
   </header>
   <div class="intro">
     <img src="/profile-img/profile_img2.png" alt="" class="avatar" />
-    <div class="title-wrapper">
+    <div class="content">
       <div class="title">
         <h1>David Levast</h1>
         <h2>Développeur utile</h2>
       </div>
-      <div class="social px-7">
-        <as href="mailto:david.levast27@gmail.com" target="_blank"
-          ><iconify-icon
+      <div class="social">
+        <a href="mailto:david.levast27@gmail.com" target="_blank">
+          <iconify-icon
             icon="material-symbols-light:mail-outline"
             style="color: white;"
             width="48"
-            height="48"></iconify-icon></as
-        >
-        <a href="https://github.com/dasyx" target="_blank" class=""
-          ><iconify-icon
+            height="48"></iconify-icon>
+        </a>
+        <a href="https://github.com/dasyx" target="_blank">
+          <iconify-icon
             icon="iconoir:github"
             style="color: white;"
             width="42"
-            height="32"></iconify-icon></a
-        >
+            height="32"></iconify-icon>
+        </a>
         <a
           href="https://www.linkedin.com/in/david-levast-9553881aa/"
           target="_blank"
-          ><iconify-icon
+        >
+          <iconify-icon
             icon="teenyicons:linkedin-outline"
             style="color: white;"
             width="38"
-            height="38"></iconify-icon></a
-        >
+            height="38"></iconify-icon>
+        </a>
       </div>
     </div>
   </div>
@@ -59,7 +60,7 @@ import Main from "../components/Main.astro";
     max-width: 100%;
     width: 100%;
     min-height: 200px;
-    height: 20vh;
+    height: 25vh;
     position: relative;
     position: sticky;
     top: calc((var(--header-scroll) * -1) + var(--title-height));
@@ -95,9 +96,11 @@ import Main from "../components/Main.astro";
   h1 {
     color: currentColor;
     margin: 0;
-    @media screen and (max-width: 768px) {
-      color: var(--gray-0);
-    }
+  }
+
+  .title {
+    position: relative; /* Nécessaire pour l'animation */
+    transition: transform 0.3s ease-out; /* Animation douce */
   }
 
   .title h2 {
@@ -109,17 +112,32 @@ import Main from "../components/Main.astro";
     width: var(--size-12);
     border-radius: 50%;
     border: var(--size-2) solid var(--surface-1);
-    position: absolute;
-    top: 0%;
-    left: var(--size-4);
-    translate: 0 -100%;
-    transform-origin: 0% 50%;
+    transform-origin: 0% 80%;
     animation: scale-down both ease-in-out;
     animation-timeline: scroll();
     animation-range: calc((var(--header-scroll) - (var(--title-height) * 1.5)))
       calc((var(--header-scroll) + (var(--title-height) * 1)));
     z-index: 2;
+    align-self: flex-start; /* Assure que l'image reste alignée à gauche */
+    margin-right: 20px; /* Ajoute un espace entre l'image et le texte */
   }
+
+  .intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    background: linear-gradient(220.55deg, #0b0a47 0%, #4643df 100%);
+    border-radius: 0; /* Pas de bords arrondis pour un bandeau */
+    position: fixed; /* Fixe le bandeau en haut de la page */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Assure que le bandeau reste au-dessus du contenu */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour le contraste */
+  }
+
   @keyframes scale-down {
     to {
       scale: 0.35;
@@ -128,44 +146,43 @@ import Main from "../components/Main.astro";
     }
   }
 
-  .intro {
-    max-width: 100%;
-    position: sticky;
-    z-index: 50;
-    top: 0;
-    //margin-top: calc(var(--size-12) * 0.5);
-  }
-
-  main {
-    max-width: 100%;
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .title {
-    color: var(--gray-11);
-    height: var(--title-height);
-    /*   display: grid; */
-    gap: var(--size-2);
-    padding: var(--size-4);
-    animation: slide both ease-in-out;
-    animation-timeline: scroll();
-    animation-range: calc((var(--header-scroll) - (var(--title-height) * 1.5)))
-      calc((var(--header-scroll) + (var(--title-height) * 0.25)));
+    color: white;
+    margin-right: auto;
   }
 
-  @keyframes slide {
-    to {
-      color: var(--gray-0);
-      translate: calc(var(--size-12) * 0.5) 0;
-    }
+  .title h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .title h2 {
+    font-size: 18px;
+    margin: 5px 0 0;
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .social a {
+    display: inline-flex;
   }
 
   .title-wrapper {
     display: flex;
     background: linear-gradient(220.55deg, #0b0a47 0%, #4643df 100%);
     position: relative;
-    width: auto;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
     animation: shadow both;
     animation-timeline: scroll();
     animation-range: calc((var(--header-scroll) + var(--title-height)))
@@ -189,37 +206,28 @@ import Main from "../components/Main.astro";
     flex-wrap: nowrap;
   }
 
-  .social {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-  .social a {
-    margin: 0 var(--size-1);
-  }
-
-  @media (min-width: 768px) {
-    /* .title-wrapper {
-      width: 100vw;
-    } */
-    .social {
-      position: absolute;
-      top: 25%;
-      right: 0;
+  @media (max-width: 768px) {
+    .intro {
+      flex-direction: column;
+      text-align: center;
     }
-  }
-  @media screen and (max-width: 768px) {
+
+    .content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social {
+      margin-top: 10px;
+    }
+
     .title-wrapper {
-      flex-direction: column; /* Empile les éléments verticalement sur les petits écrans */
-      width: 100%; /* Assurez-vous que la div occupe toute la largeur */
-      box-shadow: none; /* Optionnel: supprime l'ombre pour un look plus simple sur les petits écrans */
+      flex-direction: column;
+      width: 100%;
     }
+
     .social {
-      justify-content: center; /* Centre les icônes sociales sur les petits écrans */
-      position: relative; /* Ajuste la position si nécessaire */
-      top: 0;
-      right: 0;
+      justify-content: center;
     }
   }
 </style>
