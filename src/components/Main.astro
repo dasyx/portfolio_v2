@@ -35,10 +35,37 @@ import Artwork from "../components/Artwork.svelte";
       <p class="mb-10">
         <a href="mailto:david.levast27@gmail.com"
           ><strong>Contactez-moi</strong></a
-        > et avançons ensemble dans cette aventure numérique, où chaque ligne de
+        >
+         et avançons ensemble dans cette aventure numérique, où chaque ligne de
         code est une étape vers l'excellence.
       </p>
     </div>
+
+    <div class="bio-reseau">
+      <h3 class="my-8">Compétences Réseaux</h3>
+      <p class="mb-6">
+        Passionné par les infrastructures réseau, j'applique mes compétences en
+        développement web pour mieux comprendre et optimiser les aspects
+        sous-jacents du fonctionnement des réseaux informatiques.
+      </p>
+      <p class="mb-6">
+        Je maîtrise les concepts essentiels des réseaux tels que le modèle OSI,
+        TCP/IP, VLAN, DNS, DHCP et VPN. Mon approche analytique me permet de
+        configurer et de sécuriser efficacement des infrastructures réseau.
+      </p>
+      <p class="mb-6">
+        <strong>Développement et Réseau :</strong> mes connaissances en
+        programmation et en cybersécurité me permettent d'interagir avec les
+        systèmes réseaux, d'automatiser des tâches et de comprendre les enjeux
+        de la sécurité informatique.
+      </p>
+      <p class="mb-10">
+        Actuellement en formation continue, je poursuis des certifications
+        telles que la CompTIA Network+ et la CCNA pour approfondir mon
+        expertise.
+      </p>
+    </div>
+
     <div class="bio-img">
       <img src="/code_thinking.png" alt="Description de l'image" />
     </div>
@@ -339,7 +366,6 @@ import Artwork from "../components/Artwork.svelte";
   .bio-text {
     flex-direction: row;
     width: 100%;
-    line-height: 1.4em;
     padding: 10px;
   }
 
@@ -350,6 +376,27 @@ import Artwork from "../components/Artwork.svelte";
   .bio-img img {
     margin: 0 auto;
     width: 75%;
+  }
+
+  .bio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bio-text,
+  .bio-reseau,
+  .bio-img {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .bio-img img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
   }
 
   /* SECTION SKILLS
@@ -471,7 +518,8 @@ import Artwork from "../components/Artwork.svelte";
     .bio-text h3 {
       margin-left: 60px;
     }
-    .bio-text {
+    .bio-text,
+    .bio-reseau {
       line-height: 2em;
     }
     .bio-img {
@@ -526,6 +574,7 @@ import Artwork from "../components/Artwork.svelte";
   @media (min-width: 1440px) {
     /* Vous pouvez ajouter des ajustements supplémentaires pour les écrans de bureau si nécessaire */
     .bio-text,
+    .bio-reseau,
     .skills {
       padding: 20px 0 0 30px;
       line-height: 2em;
@@ -535,6 +584,46 @@ import Artwork from "../components/Artwork.svelte";
     }
     .skills div {
       margin: 50px 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .bio {
+      flex-direction: column;
+      text-align: center;
+    }
+    .bio-img {
+      order: 2;
+    }
+    .bio-reseau {
+      order: 3;
+    }
+    .bio-text,
+    .bio-reseau,
+    .bio-img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .bio {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+    .bio-img {
+      grid-column: span 2;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .bio {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
     }
   }
 </style>
